@@ -1,0 +1,238 @@
+/* Home.css */
+.home {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    background-color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+}
+
+.videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.categoria {
+    width: 100%;
+    margin-bottom: 40px;
+    background-color: #444;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+.categoria h2 {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+.categoria:nth-child(1) h2 {
+    color: #007fb6;
+}
+
+.categoria:nth-child(2) h2 {
+    color: #00b400;
+}
+
+.categoria:nth-child(3) h2 {
+    color: #e65c00;
+}
+
+.categoria::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 0;
+    height: 100%;
+    width: 15px;
+    background-color: transparent;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right: 5px solid;
+    border-color: #00b3ff;
+}
+
+.categoria:nth-child(1)::before {
+    border-color: #0188c2;
+}
+
+.categoria:nth-child(2)::before {
+    border-color: #01a701;
+}
+
+.categoria:nth-child(3)::before {
+    border-color: #e25a00;
+}
+
+.videos-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Tarjetas de video */
+.video-card {
+    background-color: #444;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 300px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border: 3px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease, filter 0.3s ease;
+}
+
+
+.video-card {
+    border-color: #fff; 
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+}
+
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px #fff, 0 0 30px #fff, 0 0 45px #fff;
+    filter: brightness(1.2);
+}
+
+.video-card img {
+    width: 100%;
+    border-radius: 10px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.video-card h3 {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.video-card p {
+    color: #ccc;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.video-card button {
+    background-color: #8f8f8f;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.video-card button:hover {
+    background-color: #da08da;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.modal-content {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.modal-content label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #ccc;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+.modal-content button {
+    background-color: #858585;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #00b300;
+}
+
+@media (max-width: 1200px) {
+    .videos-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta el tamaño para pantallas grandes */
+    }
+}
+
+@media (max-width: 900px) {
+    .videos-list {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Ajusta el tamaño para pantallas medianas */
+    }
+
+    .video-card {
+        width: 280px; /* Reduce el tamaño de las tarjetas en pantallas medianas */
+    }
+}
+
+@media (max-width: 600px) {
+    .videos-list {
+        grid-template-columns: 1fr; /* Una tarjeta por fila en pantallas pequeñas */
+    }
+
+    .video-card {
+        width: 100%; /* Las tarjetas ocupan todo el ancho disponible */
+    }
+
+    .categoria h2 {
+        font-size: 24px; /* Reduce el tamaño del texto en pantallas pequeñas */
+    }
+
+    h1 {
+        font-size: 24px; /* Reduce el tamaño del título en pantallas pequeñas */
+    }
+}
+
+  
+  
+  

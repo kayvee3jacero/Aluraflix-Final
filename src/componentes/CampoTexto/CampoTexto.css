@@ -1,0 +1,77 @@
+.campo-texto {
+    margin: 24px 0;
+    font-family: "Inter", sans-serif;
+}
+
+.campo-texto label {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+    color: #535353;  /* Color del texto de las etiquetas */
+}
+
+.campo-texto input {
+    width: 100%;
+    background-color: #ffffff; /* Fondo blanco */
+    color: #000000; /* Texto negro */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    outline-color: #00bcd4;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.campo-texto input:focus {
+    background-color: #ffffff; /* Fondo blanco cuando se enfoca */
+    border-color: #00bcd4;
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.4);
+    color: #000000; /* Texto negro al hacer foco */
+}
+
+@media (min-width: 1024px) {
+    .campo-texto label {
+        font-size: 20px;
+    }
+    .campo-texto input {
+        padding: 18px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .campo-texto label {
+        font-size: 18px;
+    }
+    .campo-texto input {
+        padding: 16px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .campo-texto label {
+        font-size: 16px;
+    }
+    .campo-texto input {
+        padding: 14px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .campo-texto {
+        margin: 16px 0;
+    }
+    .campo-texto label {
+        font-size: 14px;
+    }
+    .campo-texto input {
+        padding: 12px;
+        font-size: 14px;
+    }
+}

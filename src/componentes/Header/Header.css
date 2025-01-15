@@ -1,0 +1,62 @@
+.header {
+    background-color: #2b2b2b;
+    text-align: left;
+    padding: 20px;
+}
+
+.header img {
+    max-width: 300px;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.button {
+    background-color: #363636;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    float: right;
+}
+
+.main-content {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: #2b2b2b; /* Fondo oscuro para toda la sección */
+    color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+@media (min-width: 1024px) {
+    .campo-texto label {
+        font-size: 20px;
+    }
+    .campo-texto input {
+        padding: 18px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .campo-texto label {
+        font-size: 18px;
+    }
+    .campo-texto input {
+        padding: 16px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .campo-texto label {
+        font-size: 16px;
+    }
+    .campo-texto input {
+        padding: 14px;
+        font-size: 14px;
+    }
+}

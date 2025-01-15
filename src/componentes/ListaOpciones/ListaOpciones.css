@@ -1,0 +1,65 @@
+.lista-opciones label {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+    color: #ffffffea; /* Color del texto en el label */
+}
+
+.lista-opciones select {
+    width: 100%;
+    padding: 18px; /* Aumenté el padding para que el campo sea más grande */
+    background-color: #ffffff; /* Fondo blanco */
+    color: #000000; /* Texto negro en el select */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline-color: #00bcd4;
+    font-size: 20px; /* Aumenté el tamaño de la fuente */
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.lista-opciones select:focus {
+    background-color: #ffffff; /* Fondo blanco cuando se enfoca */
+    border-color: #00bcd4;
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.4);
+    color: #000000; /* Texto negro al hacer foco */
+}
+
+
+
+@media (min-width: 1024px) {
+    .lista-opciones label {
+        font-size: 18px;
+    }
+
+    .lista-opciones select {
+        padding: 24px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .lista-opciones label {
+        font-size: 16px;
+    }
+
+    .lista-opciones select {
+        padding: 18px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .lista-opciones label {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .lista-opciones select {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
